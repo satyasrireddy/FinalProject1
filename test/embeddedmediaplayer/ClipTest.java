@@ -99,8 +99,7 @@ public class ClipTest {
        System.out.println("Duplicate video");  
         
         
-    }
-    }
+    } 
     
     @Test
     public void testEqualsOnNonEqualClips() 
@@ -121,5 +120,3 @@ public class ClipTest {
     
 }
     
-
-}
