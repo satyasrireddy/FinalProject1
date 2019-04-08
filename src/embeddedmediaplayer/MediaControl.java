@@ -334,6 +334,7 @@ public class MediaControl extends VBox {
                 if (p==null) return;
                     String Title = p.getTitle();
                     p.setTitle(Title.toUpperCase());
+                    doTableRefresh(table);
                                 }
 
             });
@@ -349,6 +350,7 @@ public class MediaControl extends VBox {
                 int CurrentPosistion = p.getStart();
                 int ReducedOneSecond = CurrentPosistion - 1;
                  p.setStart(ReducedOneSecond);
+                 doTableRefresh(table);
             }
                     
         });
