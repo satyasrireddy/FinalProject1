@@ -106,12 +106,32 @@ public class ClipTest {
     @Test
     public void testEqualsOnNonEqualClips() 
     {
-        
+      
+       
+       
+       
+       
+       
     }
     
     @Test
     public void testSetEndToNegativeNumberKeepsPreviousValue() 
     {
+        System.out.println("Doesn't allow to set end time to negative number");
+       Clip instance = new Clip();
+       String OriginalTitle = "Sub video"; //Create first sub video clip
+       instance.setTitle(OriginalTitle);
+       int OriginalEndtime = 50;
+       int originalNegativenumber = -20;
+       instance.setMax(100);
+       instance.setStart(OriginalEndtime);
+       instance.setEnd(originalNegativenumber);
+       int EndTime = instance.getEnd();
+       instance.setStart(EndTime);
+       int CurrentNegativeTime = instance.getStart();
+       assertEquals(OriginalEndtime, originalNegativenumber);
+       System.out.println("Start time is same as previous value");
+       
     }
     
     @Test
