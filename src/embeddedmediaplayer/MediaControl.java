@@ -334,8 +334,7 @@ public class MediaControl extends VBox {
                 if (p==null) return;
                     String Title = p.getTitle();
                     p.setTitle(Title.toUpperCase());
-                    doTableRefresh(table);
-            }
+                                }
 
             });
         
@@ -350,16 +349,10 @@ public class MediaControl extends VBox {
                 int CurrentPosistion = p.getStart();
                 int ReducedOneSecond = CurrentPosistion - 1;
                  p.setStart(ReducedOneSecond);
-                 doTableRefresh(table);
             }
-
-            private void doTableRefresh(TableView<Clip> table) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
+                    
         });
-
-            }
-        });
+        
         final Button btnNudgeSelectedStartForward = new Button(">>");
         btnNudgeSelectedStartForward.setTooltip(new Tooltip("Nudge Selected Forward"));
         btnNudgeSelectedStartForward.setStyle("-fx-max-width:infinity");
@@ -522,8 +515,8 @@ public class MediaControl extends VBox {
           
           //gridBox.add(btnNudgeBack,6,1,1,1);
           //gridBox.add(btnNudgeForward,6,1,1,1);
-          //gridBox.add(btnAllCaps,8,1,1,1);
-          //gridBox.add(btnNudgeSelectedStartBack,8,1,1,1);
+          gridBox.add(btnAllCaps,8,1,1,1);
+          gridBox.add(btnNudgeSelectedStartBack,8,1,1,1);
           //gridBox.add(btnNudgeSelectedStartForward,8,1,1,1);
           
           
