@@ -330,8 +330,14 @@ public class MediaControl extends VBox {
         btnAllCapsSelected.setStyle("-fx-max-width:infinity");
         btnAllCapsSelected.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
+                Clip p = table.getSelectionModel().getSelectedItem();
+                if (p==null) return;
+                    String Title = p.getTitle();
+                    p.setTitle(Title.toUpperCase());
+                    doTableRefresh(table);
             }
-        });
+
+            });
         
         //moves the selected item bac
         final Button btnNudgeSelectedStartBack = new Button("<<");
